@@ -7,18 +7,19 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import { TabContext, TabList, TabPanel } from "@mui/lab";
 import Tweetcard from "../HomeSection/Tweetcard";
+import ProfileModel from "./ProfileModel";
 
 const Profile = () => {
 
   const [tabValue,setTabvalue] = useState("1");
 
   const navigate = useNavigate();
+  const[openProfileModel, setopenProfileModel] = useState(false);
+  const handleOpenProfileModel =() => setopenProfileModel(true);
+  const handleClose =() => setopenProfileModel(false);
+
 
   const handleBack = () => navigate(-1);
-
-  const handleOpenProfileModel = () => {
-    console.log("open profile model");
-  };
 
   const handleFollowUser = () => {
     console.log("handle follow model");
@@ -153,6 +154,13 @@ const Profile = () => {
       </TabContext>
     </Box>
       </section>
+
+      <section>
+            
+            <ProfileModel handleClose={handleClose} open={openProfileModel}></ProfileModel>
+        
+      </section>
+
     </div>
   );
 };

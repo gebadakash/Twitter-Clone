@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import RepeatIcon from "@mui/icons-material/Repeat";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -9,12 +9,16 @@ import FileUploadIcon from "@mui/icons-material/FileUpload";
 import BarChartIcon from "@mui/icons-material/BarChart";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { FavoriteOutlined } from "@mui/icons-material";
+import ReplyModel from "./ReplyModel";
 
 const Tweetcard = () => {
   const navigate = useNavigate();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
+  const[openReplyModel, setopenReplyModel] = useState(false);
+  const handleOpenReplyModel =() => setopenReplyModel(true);
+  const handleCloseReplyModel =() => setopenReplyModel(false);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
@@ -27,9 +31,6 @@ const Tweetcard = () => {
     handleClose();
   };
 
-  const handleOpenReplyModel = () => {
-    console.log("open model");
-  };
 
   const handleCreateRetweet = () => {
     console.log("handle create retweet");
@@ -42,7 +43,7 @@ const Tweetcard = () => {
   }
 
   return (
-    <div className="">
+    <React.Fragment>
       {/* <div className='flex item-center font-semibold text-gray-700 py-2'>
         <RepeatIcon></RepeatIcon>
         <p>You Retweet</p>
@@ -164,7 +165,11 @@ const Tweetcard = () => {
           </div>
         </div>
       </div>
-    </div>
+
+      <section>
+        <ReplyModel open={openReplyModel} handleClose={handleCloseReplyModel}></ReplyModel>
+      </section>
+    </React.Fragment>
   );
 };
 
