@@ -3,9 +3,14 @@ import { navigationMenu } from "./NavigationMenu";
 import { useNavigate } from "react-router-dom";
 import { Avatar, Button, Menu, MenuItem } from "@mui/material";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../State/Auth/Action";
 
 const Navigation = () => {
+  const {auth} = useSelector(store=>store)
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const dispatch = useDispatch()
+  
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -17,6 +22,7 @@ const Navigation = () => {
   const handleLogout=()=>{
     console.log("logout...")
     handleClose();
+    dispatch(logout());
   }
 
   const navigate = useNavigate();
@@ -75,8 +81,8 @@ const Navigation = () => {
             ></Avatar>
 
             <div>
-              <span>Akash gebad</span>
-              <span className="opacity-70">@akashgebad</span>
+              <p>{auth.user?.fullName}</p>
+              <span className="opacity-70">@{auth.user?.fullname.split(" ").join("_").toLowerCase()}</span>
             </div>
 
             <Button
