@@ -1,3 +1,80 @@
+<h1>Twitter Clone</h1>
+
+This project is a Twitter clone built using React.js for the frontend and Java Spring Boot for the backend. It utilizes JWT authentication in Spring Boot along with Spring REST API.
+React.js utilizes Axios for API calls and Tailwind CSS for styling. MySQL database is used for backend data storage.
+
+<hr>
+
+Features
+
+<li>User Authentication: JWT authentication is implemented for user authentication and authorization.</li>
+<li>Tweet Creation and Viewing: Users can create tweets and view tweets from other users.</li>
+<li>Profile Management: Users can manage their profiles, including editing their information and changing profile pictures.</li>
+<li>Followers/Following System: Users can follow/unfollow other users and view tweets from users they follow.</li>
+<li>Responsive Design: The application is designed to be responsive across various devices.</li>
+
+<hr>
+
+Technologies Used
+
+<li>Frontend:</li>
+<li>React.js</li>
+<li>Axios</li>
+<li>Tailwind CSS</li>
+
+<li>Backend:</li>
+<li>Java Spring Boot</li>
+<li>JWT Authentication</li>
+<li>Spring REST API</li>
+<li>MySQL</li>
+
+<hr>
+
+![Twitte_login_page](https://github.com/gebadakash/Twitter-Clone/assets/137673292/87453f18-1c9c-44b7-bb8a-eb099922ccfd)
+
+<hr>
+
+![twiter_ui](https://github.com/gebadakash/Twitter-Clone/assets/137673292/4bdcfedb-9ad7-4961-a1ba-3d6a28575ddb)
+
+<hr>
+
+![twitter_home_page](https://github.com/gebadakash/Twitter-Clone/assets/137673292/5185b266-c507-449c-8f90-8692e38e2a8a)
+
+<hr>
+
+Installation
+
+1.Clone the Repository:
+git clone https://github.com/your_username/twitter-clone.git
+
+2.Frontend Setup:
+cd twitter-clone/frontend
+npm install
+
+3.Backend Setup:
+<li>Import the backend project into your preferred Java IDE.</li>
+<li>Configure MySQL database settings in 'application.properties'.</li>
+<li>Run the Spring Boot application.</li>
+
+Usage
+
+1.Run the Frontend:
+cd twitter-clone/frontend
+npm start
+
+2.Access the Application:
+Open your web browser and navigate to http://localhost:3000 to access the Twitter clone application.
+
+Contributing
+Contributions are welcome! If you'd like to contribute to this project, feel free to fork the repository and submit a pull request with your changes.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgements
+<li>Special thanks to the developers of React.js, Java Spring Boot, Axios, Tailwind CSS, and MySQL for their amazing tools and technologies.</li>
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
