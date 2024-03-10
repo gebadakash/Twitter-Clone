@@ -22,6 +22,7 @@ Frontend:
 <li>Axios</li>
 <li>Tailwind CSS</li>
 
+<br>
 
 Backend:
 <li>Java Spring Boot</li>
