@@ -17,12 +17,12 @@ Features
 
 Technologies Used
 
-<li>Frontend:</li>
+Frontend:
 <li>React.js</li>
 <li>Axios</li>
 <li>Tailwind CSS</li>
 
-<li>Backend:</li>
+Backend:
 <li>Java Spring Boot</li>
 <li>JWT Authentication</li>
 <li>Spring REST API</li>
